@@ -2,9 +2,9 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #343541;
-    color: #ECECEC;
-    font-family: sans-serif;
+    background-color: #2D1E40; /* Deep purple background */
+    color: #DCE775; /* Light green text */
+    font-family: 'Poppins', sans-serif;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,79 +15,96 @@ body {
 /* Funky fonts for titles */
 .funky-title {
     font-family: 'Righteous', cursive;
-    font-size: 3em;
-    color: #7c07b7;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 3.5em;
+    color: #FF1493; /* DJ Oracle Pink for title */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .funky-subtitle {
     font-family: 'Righteous', cursive;
-    font-size: 1.5em;
-    color: #f077e6;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-size: 1.8em;
+    color: #AED581; /* Softer green for subtitles */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Centered column styling */
 .centered-column {
-    width: 50%;
+    width: 60%;
     text-align: center;
-    background-color: rgba(64, 65, 79, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    background-color: rgba(45, 30, 64, 0.9); /* Dark purple transparent */
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* Input fields styling */
 input {
     display: block;
-    width: 90%;
-    margin: 10px auto;
-    padding: 10px;
+    width: 85%;
+    margin: 15px auto;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
-    background-color: rgba(52, 53, 65, 0.9);
-    color: #f493c6;
+    border-radius: 8px;
+    background-color: #5E35B1; /* Purple gradient-like input */
+    color: #FF1493; /* Pink text on hover */
+    font-weight: bold;
 }
 
 input::placeholder {
-    color: rgba(142, 142, 142, 0.7);
+    color: rgba(240, 244, 195, 0.7);
 }
 
 /* Textarea styling */
 textarea {
     display: block;
-    width: 90%;
-    height: 400px;
-    margin: 10px auto;
-    padding: 10px;
+    width: 85%;
+    height: 300px;
+    margin: 15px auto;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
-    background-color: rgba(52, 53, 65, 0.9);
-    color: #f493c6;
-    font-family: 'Righteous', cursive;
-    font-size: 1.1em;
+    border-radius: 8px;
+    background-color: #5E35B1; /* Purple gradient-like textarea */
+    color: #AED581; /* Revert to green like the subtitle */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
     resize: none;
+    font-weight: bold;
 }
 
 textarea::placeholder {
-    color: rgba(142, 142, 142, 0.7);
+    color: rgba(240, 244, 195, 0.7);
 }
 
 /* Button styling */
 button {
     display: inline-block;
-    background-color: rgba(86, 86, 124, 0.9);
-    color: #f493c6;
+    background-color: #FF1493; /* Pink button color */
+    color: #AED581; /* Revert to green like the subtitle */
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 1em;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: rgba(110, 110, 158, 1);
+    background-color: #5E35B1; /* Purple hover effect */
+    color: #AED581; /* Match subtitle text color */
+    transform: scale(1.05);
+}
+
+input::placeholder {
+    color: #AED581; /* Match subtitle text color */
+}
+
+textarea::placeholder {
+    color: #AED581; /* Match subtitle text color */
+}
+
+button:active {
+    transform: scale(0.97);
 }
 
 /* Background image layer */
@@ -101,26 +118,27 @@ button:hover {
     background-size: cover;
     background-position: center;
     transition: background-image 1s ease-in-out;
+    filter: brightness(0.75);
 }
+
 /* Responsive adjustments for mobile screens */
 @media (max-width: 768px) {
     .centered-column {
-        width: 100%; /* Reduce the width of the container for smaller screens */
-        padding: 15px; /* Adjust padding for better fit */
+        width: 90%;
+        padding: 20px;
     }
 
     input, textarea {
-        width: 100%; /* Make input and textarea take full width of the container */
-        font-size: 1em; /* Adjust font size for better readability on small screens */
-        height: auto; /* Allow textarea height to adapt */
+        width: 100%;
+        font-size: 0.9em;
     }
 
     textarea {
-        height: 300px; /* Adjust height for mobile devices */
+        height: 250px;
     }
 
     button {
-        width: 100%; /* Ensure the button spans full width for better usability */
-        font-size: 1em; /* Adjust button font size for smaller screens */
+        width: 100%;
+        font-size: 0.9em;
     }
 }
